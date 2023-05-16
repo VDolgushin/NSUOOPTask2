@@ -132,7 +132,7 @@ public class Model {
     }
 
     public static File getLeaderboard() {
-        URL u = Model.class.getResource("/HighScores.txt");
+        URL u = Model.class.getResource("HighScores.txt");
         assert u != null;
         try {
             return new File(u.toURI());

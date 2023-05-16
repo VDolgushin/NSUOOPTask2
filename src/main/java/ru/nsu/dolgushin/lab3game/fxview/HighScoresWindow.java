@@ -28,16 +28,6 @@ public class HighScoresWindow {
         flagFirstStart = false;
         VBox vBoxABout = new VBox();
 
-
-        Text text1 = new Text("Apricot Garden... Such beautiful and peaceful place...");
-        Text text2 = new Text("But today death and murder have come to this land!");
-        Text text3 = new Text("Souls of the dead should not desecrate this glorious space!");
-        Text text4 = new Text("Raise your holy glock and send them back to limbo!");
-        text1.setFont(new Font("IMPACT",65));
-        text2.setFont(new Font("IMPACT",65));
-        text3.setFont(new Font("IMPACT",65));
-        text4.setFont(new Font("IMPACT",65));
-
         File file = Model.getLeaderboard();
         try(BufferedReader bf = new BufferedReader(new FileReader(file))){
             String line = bf.readLine();
