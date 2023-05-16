@@ -116,7 +116,7 @@ public class Model {
                 }
                 long p = raf.getFilePointer()-1-line.length();
                 raf.seek(p);
-                byte [] data= new byte[(int)(new File(u.toString()).length()-p)];
+                byte [] data= new byte[(int)(new File(u.toURI()).length()-p)];
                 raf.readFully(data);
                 raf.seek(p);
                 raf.writeBytes(playerName + " " + scoreManager.getScores() + "\n");

@@ -4,30 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a73acee-926e-40f2-8f6e-879f3462eafd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/ru/nsu/dolgushin/lab3game/model/aaaa.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/fxview/FXListenerView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/fxview/FXListenerView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/fxview/sound/SoundTrack.wav" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ru/nsu/dolgushin/lab3game/fxview/sound/SoundTrack.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/fxview/sprites/Apricot.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ru/nsu/dolgushin/lab3game/fxview/sprites/Apricot.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/fxview/sprites/ApricotBullet.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ru/nsu/dolgushin/lab3game/fxview/sprites/ApricotBullet.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/fxview/sprites/ApricotGarden.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ru/nsu/dolgushin/lab3game/fxview/sprites/ApricotGarden.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/fxview/sprites/Block.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ru/nsu/dolgushin/lab3game/fxview/sprites/Block.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/fxview/sprites/Bullet.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ru/nsu/dolgushin/lab3game/fxview/sprites/Bullet.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/fxview/sprites/Skull.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ru/nsu/dolgushin/lab3game/fxview/sprites/Skull.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/fxview/sprites/Skull2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ru/nsu/dolgushin/lab3game/fxview/sprites/Skull2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/model/HighScores" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ru/nsu/dolgushin/lab3game/model/HighScores.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/model/Model.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/view/JFrameGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/view/JFrameGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/view/sound/SoundTrack.wav" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ru/nsu/dolgushin/lab3game/view/sound/SoundTrack.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/view/sprites/Apricot.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ru/nsu/dolgushin/lab3game/view/sprites/Apricot.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/view/sprites/ApricotBullet.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ru/nsu/dolgushin/lab3game/view/sprites/ApricotBullet.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/view/sprites/ApricotGarden.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ru/nsu/dolgushin/lab3game/view/sprites/ApricotGarden.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/view/sprites/Block.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ru/nsu/dolgushin/lab3game/view/sprites/Block.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/view/sprites/Bullet.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ru/nsu/dolgushin/lab3game/view/sprites/Bullet.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/view/sprites/Skull.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ru/nsu/dolgushin/lab3game/view/sprites/Skull.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/view/sprites/Skull2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ru/nsu/dolgushin/lab3game/view/sprites/Skull2.png" afterDir="false" />
-    </list>
+    <list default="true" id="6a73acee-926e-40f2-8f6e-879f3462eafd" name="Changes" comment="Maven" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,12 +19,13 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -72,17 +50,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/btlll/IdeaProjects/NSUOOPTask2/src/main/java/ru/nsu/dolgushin",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "project.propCompiler"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/btlll/IdeaProjects/NSUOOPTask2/src/main/java/ru/nsu/dolgushin&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propCompiler&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\btlll\IdeaProjects\NSUOOPTask2\src\main\java\ru\nsu\dolgushin" />
@@ -99,7 +77,7 @@
       <recent name="ru.nsu.dolgushin.lab3game.view" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.NewMain">
+  <component name="RunManager" selected="Application.ru.nsu.dolgushin.lab3game.view.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="lab3game.view.Main" />
       <module name="NSUOOPTask2" />
@@ -154,8 +132,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.NewMain" />
         <item itemvalue="Application.ru.nsu.dolgushin.lab3game.view.Main" />
+        <item itemvalue="Application.NewMain" />
         <item itemvalue="Application.MenuFX" />
         <item itemvalue="Application.Main" />
       </list>
@@ -171,6 +149,17 @@
       <updated>1684163224786</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
