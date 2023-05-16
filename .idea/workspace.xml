@@ -5,72 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a73acee-926e-40f2-8f6e-879f3462eafd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/controller/JavaFXController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/controller/SimpleController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/fxview/AboutWindow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/fxview/FXListenerView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/fxview/HighScoresWindow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/fxview/MenuFX.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/fxview/NewGameWindow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/fxview/NewMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/fxview/sound/SoundTrack.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/fxview/sprites/Apricot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/fxview/sprites/ApricotBullet.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/fxview/sprites/ApricotGarden.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/fxview/sprites/Block.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/fxview/sprites/Bullet.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/fxview/sprites/Skull.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/fxview/sprites/Skull2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/model/Field.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/model/HighScores" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/model/Model.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/model/gameobjects/Apricot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/model/gameobjects/ApricotBullet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/model/gameobjects/Block.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/model/gameobjects/Bullet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/model/gameobjects/DamageDealer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/model/gameobjects/DamageReceiver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/model/gameobjects/Enemy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/model/gameobjects/FragileProjectile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/model/gameobjects/GameObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/model/gameobjects/Ghost.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/model/gameobjects/IGameObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/model/gameobjects/ObjectThatCanFall.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/model/gameobjects/ObjectWithBehaviour.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/model/gameobjects/ObjectWithCollision.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/model/gameobjects/Projectile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/model/gameobjects/ScoreManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/model/gameobjects/Skull.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/model/gameobjects/Skull2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/model/gameobjects/SkullSpawner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/model/gameobjects/VisibleObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/model/gameobjects/gameutility/DamageManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/model/gameobjects/gameutility/Hitbox.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/model/gameobjects/gameutility/IDamageManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/model/gameobjects/gameutility/Point.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/model/modellistener/ModelListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/model/modellistener/VisibleGameObjectViewInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/view/AboutListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/view/JFrameGame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/view/JFrameMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/view/LeaderBoardListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/view/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/view/NewGameListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/view/TextListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/view/sound/SoundTrack.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/view/sprites/Apricot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/view/sprites/ApricotBullet.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/view/sprites/ApricotGarden.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/view/sprites/Block.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/view/sprites/Bullet.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/view/sprites/Skull.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/view/sprites/Skull2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/ru/nsu/dolgushin/lab3game/model/aaaa.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/fxview/FXListenerView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/fxview/FXListenerView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/fxview/sound/SoundTrack.wav" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ru/nsu/dolgushin/lab3game/fxview/sound/SoundTrack.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/fxview/sprites/Apricot.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ru/nsu/dolgushin/lab3game/fxview/sprites/Apricot.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/fxview/sprites/ApricotBullet.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ru/nsu/dolgushin/lab3game/fxview/sprites/ApricotBullet.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/fxview/sprites/ApricotGarden.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ru/nsu/dolgushin/lab3game/fxview/sprites/ApricotGarden.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/fxview/sprites/Block.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ru/nsu/dolgushin/lab3game/fxview/sprites/Block.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/fxview/sprites/Bullet.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ru/nsu/dolgushin/lab3game/fxview/sprites/Bullet.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/fxview/sprites/Skull.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ru/nsu/dolgushin/lab3game/fxview/sprites/Skull.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/fxview/sprites/Skull2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ru/nsu/dolgushin/lab3game/fxview/sprites/Skull2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/model/HighScores" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ru/nsu/dolgushin/lab3game/model/HighScores.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/model/Model.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/view/JFrameGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/view/JFrameGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/view/sound/SoundTrack.wav" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ru/nsu/dolgushin/lab3game/view/sound/SoundTrack.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/view/sprites/Apricot.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ru/nsu/dolgushin/lab3game/view/sprites/Apricot.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/view/sprites/ApricotBullet.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ru/nsu/dolgushin/lab3game/view/sprites/ApricotBullet.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/view/sprites/ApricotGarden.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ru/nsu/dolgushin/lab3game/view/sprites/ApricotGarden.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/view/sprites/Block.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ru/nsu/dolgushin/lab3game/view/sprites/Block.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/view/sprites/Bullet.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ru/nsu/dolgushin/lab3game/view/sprites/Bullet.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/view/sprites/Skull.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ru/nsu/dolgushin/lab3game/view/sprites/Skull.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/view/sprites/Skull2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ru/nsu/dolgushin/lab3game/view/sprites/Skull2.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,6 +42,19 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="bd878377-37e8-4e20-94ed-1d79c02f6cc8" />
+        <option name="url" value="https://github.com/VDolgushin/NSUOOPTask2.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -107,13 +76,27 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/btlll/IdeaProjects/NSUOOPTask2/src/main/java/ru/nsu/dolgushin"
+    "last_opened_file_path": "C:/Users/btlll/IdeaProjects/NSUOOPTask2/src/main/java/ru/nsu/dolgushin",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "project.propCompiler"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\btlll\IdeaProjects\NSUOOPTask2\src\main\java\ru\nsu\dolgushin" />
       <recent name="C:\Users\btlll\IdeaProjects\NSUOOPTask2\src\main\java" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Vasil\IdeaProjects\NSUOOPTask2\src\main\resources\ru\nsu\dolgushin\lab3game\model" />
+      <recent name="C:\Users\Vasil\IdeaProjects\NSUOOPTask2\src\main\resources\ru\nsu\dolgushin\lab3game\fxview\sound" />
+      <recent name="C:\Users\Vasil\IdeaProjects\NSUOOPTask2\src\main\resources\ru\nsu\dolgushin\lab3game\fxview\sprites" />
+      <recent name="C:\Users\Vasil\IdeaProjects\NSUOOPTask2\src\main\resources\ru\nsu\dolgushin\lab3game\view\sound" />
+      <recent name="C:\Users\Vasil\IdeaProjects\NSUOOPTask2\src\main\resources\ru\nsu\dolgushin\lab3game\view\sprites" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="ru.nsu.dolgushin.lab3game.view" />
     </key>
   </component>
   <component name="RunManager" selected="Application.NewMain">
@@ -172,8 +155,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.NewMain" />
-        <item itemvalue="Application.MenuFX" />
         <item itemvalue="Application.ru.nsu.dolgushin.lab3game.view.Main" />
+        <item itemvalue="Application.MenuFX" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -188,5 +171,25 @@
       <updated>1684163224786</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/nsu/dolgushin/lab3game/view/JFrameGame.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NegativeArraySizeException" package="java.lang" />
+          <option name="timeStamp" value="10" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/NSUOOPTask2$ru_nsu_dolgushin_lab3game_view_Main.ic" NAME="ru.nsu.dolgushin.lab3game.view.Main Coverage Results" MODIFIED="1684224811649" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ru.nsu.dolgushin.lab3game.view.*</FILTER>
+    </SUITE>
   </component>
 </project>

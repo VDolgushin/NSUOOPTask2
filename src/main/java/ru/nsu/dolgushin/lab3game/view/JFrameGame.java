@@ -10,7 +10,9 @@ import javax.sound.sampled.*;
 import javax.swing.*;
 import java.awt.*;
 import java.io.*;
+import java.net.URL;
 import java.util.HashMap;
+import java.util.Objects;
 
 public class JFrameGame extends JFrame implements ModelListener {
 
@@ -52,7 +54,9 @@ public class JFrameGame extends JFrame implements ModelListener {
 
         JPanel bgPanel = new JPanel(null);
         try {
-            background = new JLabel(new ImageIcon(ImageIO.read(new File(System.getProperty("user.dir")+"\\src\\main\\java\\ru\\nsu\\dolgushin\\lab3game\\view\\sprites\\ApricotGarden.png"))));
+            URL u = this.getClass().getResource("sprites/ApricotGarden.png");
+            assert u != null;
+            background = new JLabel(new ImageIcon(ImageIO.read(u)));
             background.setBounds(0,0,1600,900);
             bgPanel.setBounds(0,0,1600,900);
             bgPanel.add(background);
@@ -66,11 +70,14 @@ public class JFrameGame extends JFrame implements ModelListener {
         setLayeredPane(lp);
         Model model = new Model(this,playerName);
         addKeyListener(new SimpleController(model));
-
-        try (AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File(System.getProperty("user.dir")+"/src/main/java/ru/nsu/dolgushin/lab3game/view/sound/SoundTrack.wav"))){
-                clip = AudioSystem.getClip();
-                clip.open(audioInputStream);
-                clip.start();
+        URL u = this.getClass().getResource("sound/SoundTrack.wav");
+        try {
+            assert u != null;
+            try (AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(u)){
+                    clip = AudioSystem.getClip();
+                    clip.open(audioInputStream);
+                    clip.start();
+            }
         }
         catch (LineUnavailableException ex) {
             throw new RuntimeException();
@@ -84,8 +91,8 @@ public class JFrameGame extends JFrame implements ModelListener {
     @Override
     public void addObject(VisibleGameObjectViewInfo obj) {
         try {
-            String s =System.getProperty("user.dir")+ "/src/main/java/ru/nsu/dolgushin/lab3game/view/sprites/" + obj.getClassName() + ".png";
-            ImageIcon image = new ImageIcon(ImageIO.read(new File(s)));
+            URL u = this.getClass().getResource("sprites/" + obj.getClassName() + ".png");
+            ImageIcon image = new ImageIcon(ImageIO.read(Objects.requireNonNull(u)));
             JLabel objView = new JLabel(image);
             visibleObjectsMap.put(obj.getId(), objView);
             objView.setBounds(obj.getX(), obj.getY(), obj.getMaskWidth(), obj.getMaskHeight());

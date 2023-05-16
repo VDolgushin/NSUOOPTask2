@@ -4,6 +4,8 @@ import ru.nsu.dolgushin.lab3game.model.gameobjects.*;
 import ru.nsu.dolgushin.lab3game.model.modellistener.ModelListener;
 
 import java.io.*;
+import java.net.URISyntaxException;
+import java.net.URL;
 import java.util.Set;
 
 public class Model {
@@ -46,7 +48,7 @@ public class Model {
         ls = lsInput;
         int gravitation = 1;//(int)9.81;
         field = new Field(this,ls);
-        player = new Apricot(field,0,200, 100 ,100,5, gravitation);
+        player = new Apricot(field,400,200, 100 ,100,5, gravitation);
         new Block(field,-200,400,100,100);
         new Block(field,-200,500,100,100);
         new Block(field,-200,600,100,100);
@@ -87,44 +89,56 @@ public class Model {
         isGameEnded = true;
         String line ="";
         int  i = 0;
-        try (RandomAccessFile raf = new RandomAccessFile(System.getProperty("user.dir")+"/src/ru/nsu/dolgushin/lab3game/model/HighScores","rw")){
-            while (i<11){
-                line = raf.readLine();
-                try{
+        URL u = this.getClass().getResource("HighScores.txt");
+        try {
+            assert u != null;
+            try (RandomAccessFile raf = new RandomAccessFile(new File(u.toURI()),"rw")){
+                while (i<11){
                     line = raf.readLine();
-                    if( line == null || Integer.parseInt(line.split(" ")[1]) < scoreManager.getScores()){
+                    try{
+                        line = raf.readLine();
+                        if( line == null || Integer.parseInt(line.split(" ")[1]) < scoreManager.getScores()){
+                            break;
+                        }
+                        i++;
+                    }
+                    catch (NumberFormatException ignored){
+                    }
+                    catch (IndexOutOfBoundsException | EOFException ex){
                         break;
                     }
-                    i++;
                 }
-                catch (NumberFormatException ignored){
+                if(i >= 10){
+                    return;
                 }
-                catch (IndexOutOfBoundsException | EOFException ex){
-                    break;
+                if(line == null){
+                    line = "";
                 }
+                long p = raf.getFilePointer()-1-line.length();
+                raf.seek(p);
+                byte [] data= new byte[(int)(new File(u.toString()).length()-p)];
+                raf.readFully(data);
+                raf.seek(p);
+                raf.writeBytes(playerName + " " + scoreManager.getScores() + "\n");
+                raf.write(data);
+                ls.GameEnded();
+            } catch (URISyntaxException e) {
+                throw new RuntimeException(e);
             }
-            if(i >= 10){
-                return;
-            }
-            if(line == null){
-                line = "";
-            }
-            long p = raf.getFilePointer()-1-line.length();
-            raf.seek(p);
-            byte [] data= new byte[(int)(new File(System.getProperty("user.dir")+"/src/ru/nsu/dolgushin/lab3game/model/HighScores").length()-p)];
-            raf.readFully(data);
-            raf.seek(p);
-            raf.writeBytes(playerName + " " + scoreManager.getScores() + "\n");
-            raf.write(data);
-            ls.GameEnded();
         }
         catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
 
-    public static File getLeaderboard(){
-        return new File(System.getProperty("user.dir")+"/src/ru/nsu/dolgushin/lab3game/model/HighScores");
+    public static File getLeaderboard() {
+        URL u = Model.class.getResource("/HighScores.txt");
+        assert u != null;
+        try {
+            return new File(u.toURI());
+        } catch (URISyntaxException e) {
+            throw new RuntimeException(e);
+        }
     }
     void pauseGame(){
         if(isGamePaused){

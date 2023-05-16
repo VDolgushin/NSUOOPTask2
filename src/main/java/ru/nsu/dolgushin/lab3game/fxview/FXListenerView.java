@@ -16,6 +16,7 @@ import ru.nsu.dolgushin.lab3game.model.modellistener.VisibleGameObjectViewInfo;
 import javax.sound.sampled.*;
 import java.io.File;
 import java.io.IOException;
+import java.net.URL;
 import java.util.HashMap;
 
 
@@ -41,7 +42,9 @@ public class FXListenerView implements ModelListener {
         stopped = new Text("PAUSED");
         stopped.setFont(new Font("IMPACT",500));
         stopped.setVisible(false);
-        BackgroundImage background = new BackgroundImage(new Image(System.getProperty("user.dir")+"\\src\\main\\java\\ru\\nsu\\dolgushin\\lab3game\\view\\sprites\\ApricotGarden.png"), BackgroundRepeat.NO_REPEAT,BackgroundRepeat.NO_REPEAT, BackgroundPosition.CENTER, new BackgroundSize(1600,900,false,false,false,false));
+        URL u = this.getClass().getResource("sprites/ApricotGarden.png");
+        assert u != null;
+        BackgroundImage background = new BackgroundImage(new Image(u.toString()), BackgroundRepeat.NO_REPEAT,BackgroundRepeat.NO_REPEAT, BackgroundPosition.CENTER, new BackgroundSize(1600,900,false,false,false,false));
 
         scores.setX(10);
         scores.setY(50);
@@ -63,10 +66,14 @@ public class FXListenerView implements ModelListener {
         scene.setOnKeyPressed(sc::keyPressed);
         scene.setOnKeyReleased(sc::keyReleased);
 
-        try (AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File(System.getProperty("user.dir")+"/src/main/java/ru/nsu/dolgushin/lab3game/fxview/sound/SoundTrack.wav"))){
-                clip = AudioSystem.getClip();
-                clip.open(audioInputStream);
-                clip.start();
+        u = this.getClass().getResource("sound/SoundTrack.wav");
+        try {
+            assert u != null;
+            try (AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(u)){
+                    clip = AudioSystem.getClip();
+                    clip.open(audioInputStream);
+                    clip.start();
+            }
         }
         catch (LineUnavailableException ex) {
             throw new RuntimeException();
@@ -79,7 +86,9 @@ public class FXListenerView implements ModelListener {
 
     @Override
     public void addObject(VisibleGameObjectViewInfo obj) {
-        ImageView objView = new ImageView(new Image(System.getProperty("user.dir")+ "/src/main/java/ru/nsu/dolgushin/lab3game/fxview/sprites/" + obj.getClassName() + ".png",obj.getMaskWidth(),obj.getMaskHeight(),false,false));
+        URL u =this.getClass().getResource("sprites/" + obj.getClassName() + ".png");
+        assert u != null;
+        ImageView objView = new ImageView(new Image(u.toString(),obj.getMaskWidth(),obj.getMaskHeight(),false,false));
         Platform.runLater(() -> {
         objView.setX(obj.getX()-100);
         objView.setY(obj.getY()-100);
