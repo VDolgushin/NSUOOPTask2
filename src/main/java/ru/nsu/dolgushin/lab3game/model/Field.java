@@ -10,7 +10,7 @@ import java.util.*;
 
 public class Field {
     private final ModelListener ls;
-    private final Map<Point, GameObject> collisionLayer= new TreeMap<>();
+    private final Map<Point, GameObject> collisionLayer = new TreeMap<>();
     private final Map<IGameObject,Hitbox> objectCords  = new HashMap<>();
     private final List<ObjectWithBehaviour> objectsWithBehaviour = new ArrayList<>();
     private final Model model;
@@ -21,35 +21,35 @@ public class Field {
         isGameEnded = false;
     }
     public void addObjectToField(IGameObject owc,int x, int y){
-        if (VisibleObject.class.isAssignableFrom(owc.getClass())) {
+        if (owc instanceof VisibleObject) {
             ls.addObject(new VisibleGameObjectViewInfo(owc,x,y));
             if(!ObjectWithCollision.class.isAssignableFrom(owc.getClass())){
                 Hitbox hb = new Hitbox(x,y, owc.getHeight(), owc.getWidth());
                 objectCords.put(owc,hb);
             }
         }
-        if(ObjectWithCollision.class.isAssignableFrom(owc.getClass())){
+        if(owc instanceof ObjectWithCollision){
             addObjectWithCollision( (ObjectWithCollision)owc,x,y);
         }
-        if(ObjectWithBehaviour.class.isAssignableFrom(owc.getClass())){
+        if(owc instanceof ObjectWithBehaviour){
             objectsWithBehaviour.add((ObjectWithBehaviour)owc);
-            if(!VisibleObject.class.isAssignableFrom(owc.getClass())){
+            if(!(owc instanceof VisibleObject)){
                 Hitbox hb = new Hitbox(x,y, owc.getHeight(), owc.getWidth());
                 objectCords.put(owc,hb);
             }
         }
     }
     public void removeObjectFromField(IGameObject owc){
-        if(VisibleObject.class.isAssignableFrom(owc.getClass())){
+        if(owc instanceof VisibleObject){
             ls.removeObject(owc.getId());
             if(!ObjectWithCollision.class.isAssignableFrom(owc.getClass())){
                 objectCords.remove(owc);
             }
         }
-        if(ObjectWithCollision.class.isAssignableFrom(owc.getClass())){
+        if(owc instanceof ObjectWithCollision){
             removeObjectFromCollisionLayer(objectCords.get(owc),(ObjectWithCollision) owc);
         }
-        if(ObjectWithBehaviour.class.isAssignableFrom(owc.getClass())){
+        if(owc instanceof ObjectWithBehaviour){
             owc.setDead();
         }
     }
@@ -75,22 +75,22 @@ public class Field {
         receiver.getDamage(dealer.giveDamage());
     }
     private int checkAndDealCollisionDamage(GameObject a, GameObject b){
-        if(Enemy.class.isAssignableFrom(a.getClass()) && !Enemy.class.isAssignableFrom(b.getClass()) || !Enemy.class.isAssignableFrom(a.getClass()) && Enemy.class.isAssignableFrom(b.getClass())) {
-            if (DamageReceiver.class.isAssignableFrom(a.getClass()) && DamageDealer.class.isAssignableFrom(b.getClass())) {
+        if(a instanceof Enemy && !(b instanceof Enemy) || !(a instanceof Enemy) && b instanceof Enemy) {
+            if (a instanceof DamageReceiver && b instanceof DamageDealer) {
                 dealCollisionDamage((DamageReceiver) a, (DamageDealer) b);
                 removeObjectFromField(b);
                 return 1;
             }
-            if (DamageDealer.class.isAssignableFrom(a.getClass()) && DamageReceiver.class.isAssignableFrom(b.getClass())) {
+            if (a instanceof DamageDealer && b instanceof DamageReceiver) {
                 dealCollisionDamage((DamageReceiver) b, (DamageDealer) a);
                 return -1;
             }
         }
-        if(!(Enemy.class.isAssignableFrom(a.getClass()) && Enemy.class.isAssignableFrom(b.getClass()))) {
-            if (DamageDealer.class.isAssignableFrom(a.getClass()) && FragileProjectile.class.isAssignableFrom(a.getClass()) && !Projectile.class.isAssignableFrom(b.getClass())) {
+        if(!(a instanceof Enemy) && b instanceof Enemy) {
+            if (a instanceof FragileProjectile && !(b instanceof Projectile)) {
                 return -1;
             }
-            if (DamageDealer.class.isAssignableFrom(b.getClass()) && FragileProjectile.class.isAssignableFrom(b.getClass()) && !Projectile.class.isAssignableFrom(a.getClass())) {
+            if (b instanceof FragileProjectile &&  !(a instanceof Projectile)) {
                 return -2;
             }
         }
@@ -113,11 +113,11 @@ public class Field {
                     removeObjectFromField(collisionLayer.get(p));
                     return checkCollisionsX(owc,hb, x, xNear);
                 }
-                if(Ghost.class.isAssignableFrom(collisionLayer.get(p).getClass()) || Ghost.class.isAssignableFrom(owc.getClass())){
+                if(collisionLayer.get(p) instanceof Ghost || owc instanceof Ghost){
                     continue;
                 }
                 addObjectWithCollision(owc, hb.getNorthWest().getX() + p.getX()-xNear, hb.getNorthWest().getY());
-                if (VisibleObject.class.isAssignableFrom(owc.getClass())) {
+                if (owc instanceof VisibleObject) {
                     ls.notifyCords(owc.getId(), hb.getNorthWest().getX()+ p.getX()-xNear, hb.getNorthWest().getY());
                 }
                 return -1;
@@ -137,11 +137,11 @@ public class Field {
                     removeObjectFromField(owc);
                     return -1;
                 }
-                if(Ghost.class.isAssignableFrom(collisionLayer.get(p).getClass()) || Ghost.class.isAssignableFrom(owc.getClass())){
+                if(collisionLayer.get(p) instanceof Ghost || owc instanceof Ghost){
                     continue;
                 }
                 addObjectWithCollision(owc, hb.getNorthWest().getX(), hb.getNorthWest().getY() + p.getY() - yNear);
-                if (VisibleObject.class.isAssignableFrom(owc.getClass())) {
+                if (owc instanceof VisibleObject) {
                     ls.notifyCords(owc.getId(), hb.getNorthWest().getX(), hb.getNorthWest().getY() + p.getY() - yNear);
                 }
                 return -1;
@@ -165,7 +165,7 @@ public class Field {
             return -1;
         }
         addObjectWithCollision(owc,hb.getNorthWest().getX()+x, hb.getNorthWest().getY());
-        if (VisibleObject.class.isAssignableFrom(owc.getClass())) {
+        if (owc instanceof VisibleObject) {
             ls.notifyCords(owc.getId(),hb.getNorthWest().getX()+x, hb.getNorthWest().getY());
         }
         return 1;
@@ -186,7 +186,7 @@ public class Field {
             return -1;
         }
         addObjectWithCollision(owc,hb.getNorthWest().getX(), hb.getNorthWest().getY()+y);
-        if (VisibleObject.class.isAssignableFrom(owc.getClass())) {
+        if (owc instanceof VisibleObject) {
             ls.notifyCords(owc.getId(),hb.getNorthWest().getX(), hb.getNorthWest().getY()+y);
         }
         return 1;
@@ -202,7 +202,7 @@ public class Field {
         return 1;
     }
     public int moveMeY(ObjectWithCollision owc, int y){
-        if (ObjectThatCanFall.class.isAssignableFrom(owc.getClass())) {
+        if (owc instanceof ObjectThatCanFall) {
             return moveYFalling((GameObject &ObjectThatCanFall) owc,y);
         }
         return moveY(owc,y);
